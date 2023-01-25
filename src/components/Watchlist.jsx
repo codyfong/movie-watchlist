@@ -1,10 +1,11 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
-const Watchlist = ({list}) => {
+const Watchlist = ({list, removeMovie}) => {
     const movieDisplay = list.map( element => {
-    return(<MovieCard movie = {element}/>)
+    return(<MovieCard movie = {element} removeMovie={removeMovie} list={list}/>)
 })
+
     return(    
     <div className="watchlist">
         <h1>My Watchlist</h1>
